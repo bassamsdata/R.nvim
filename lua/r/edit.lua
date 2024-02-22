@@ -168,7 +168,7 @@ end
 ---@param txt string The concatenated lines to be displayed.
 M.view_df = function(oname, howto, txt)
     local csv_lines = vim.split(string.gsub(txt, "\019", "'"), "\020")
-    local tsvnm = config.tmpdir .. "/" .. oname .. ".tsv"
+    local tsvnm = config.tmpdir .. "/" .. oname .. ".csv"
 
     vim.fn.writefile(csv_lines, tsvnm)
     M.add_for_deletion(tsvnm)
